@@ -1,15 +1,16 @@
 print('Hello!')
 print('I calculate gasoline usage and amount conversions.')
 print('Please enter an amount of gasoline in gallons.')
-galnGas = float(input('-->:'))
+galGas = float(input('-->:'))
 
-litrGas = galnGas*3.785
-barlOil = galnGas/19.5
-co2Prod = galnGas*20
-btueGas = galnGas*115000
+litrGas = galGas*3.785
+barlOil = galGas/19.5
+co2Prod = galGas*20
+btueGas = galGas*115000
 btueEth = btueGas/75700
-monyGas = galnGas*3
+monyGas = galGas*3
 
+print('You entered '+str()+' gallons')
 print('-That much gasoline in liters is '+str(round(litrGas, 2))+' liters')
 print('-It would take '+str(round(barlOil, 2))+' barrels to make that much gasoline')
 print('-If you burned all that gasoline it would produce '+str(co2Prod)+' pounds of CO2')
