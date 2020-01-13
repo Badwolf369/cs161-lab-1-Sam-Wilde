@@ -1,7 +1,9 @@
+#set starting values
 oldDist = 16637000000
 speedperhour = 38241
 speedperday = speedperhour*24
 
+#startup dialogue; str() converts set values to strings
 print('The Voyager 1 spacecraft launched Septemeber 15, 1977.')
 print('The NASA update page on Septemeber 25, 2009, reported the spacecraft as') 
 print('being roughly 16,637,000,000 miles from the sun.')
@@ -10,15 +12,16 @@ print('')
 print('With this information I can estimate how far away from the sun the spacecraft will')
 print('be with a given number of days from the last report in 2009.')
 print('How many days after the last report do you want me to estimate?')
-askTime = int(input('-->:'))
 
+#runs calculations
+askTime = int(input('-->:')) #input prompt; int() converts input to integer
 estimateDistMi = oldDist+(speedperday*askTime)
 estimateDistKm = estimateDistMi*1.609344
 estimateDistAu = estimateDistMi/929558876
-
 comSpeed = 57760.111
 comTime = (estimateDistMi/comSpeed)*60*60
 
+#final dialogue; str() converts calculations to strings
 print('')
 print('The distance from the sun in miles is '+str(estimateDistMi)+'.')
 print('The distance from the sun in kilometers is '+str(estimateDistKm)+'.')
